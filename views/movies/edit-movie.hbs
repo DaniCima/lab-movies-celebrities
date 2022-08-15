@@ -1,0 +1,15 @@
+<h2>Editing babe</h2>
+<form action="/movies/{{id}}" method="post">
+  {{#each theMovie}}
+    <input type="text" title="movietitle" id="movie-title" value="{{title}}" />
+    <input type="text" title="moviegenre" id="movie-genre" value="{{genre}}" />
+    <input type="text" plot="movieplot" id="movie-plot" value="{{plot}}" />
+  {{/each}}
+  <select name="cast" id="cast-select">
+    {{! <option disable selected value=""></option> }}
+    {{#each foundedCelebrities}}
+      <option value="{{id}}"> {{name}} </option>
+    {{/each}}
+  </select>
+
+</form>
